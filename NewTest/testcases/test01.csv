@@ -1,0 +1,5 @@
+﻿element_name,xpath,action,paras,wait
+排班,"//android.widget.TextView[contains(@text,'排班')]",click,,10
+订单处理,"//android.widget.TextView[contains(@text,'订单处理')]",click,,10
+点击X,"//android.widget.ImageView[contains(@index,'1')]",click,,
+X,"//android.widget.ImageView[contains(@id,'com.gongzhidao.nobel:id/close')]",is_in,yes,
