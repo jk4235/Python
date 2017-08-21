@@ -1,0 +1,11 @@
+﻿element_name,xpath,action,paras,wait
+生产工序,"//android.widget.TextView[contains(@text,'生产工序')]",click,,
+绑定设备,"//android.widget.TextView[contains(@text,'绑定设备')]",click,,
+解锁,//android.widget.ImageView[@index='1'],click,,
+点击挤出,"//android.widget.TextView[contains(@text,'挤出')]",click,,
+Ext-201,"//android.support.v7.widget.RecyclerView/android.widget.LinearLayout[contains(@index,1)]/android.widget.TextView[contains(@index,0)]",click,,
+解除绑定,com.gongzhidao.nobel:id/btn_bind_or_unbind,click,,
+返回,com.gongzhidao.nobel:id/iv_top_back,click,,
+工序操作台,"//android.widget.TextView[contains(@text,'工序操作台')]",click,,
+点击挤出,"//android.widget.TextView[contains(@text,'挤出')]",click,,
+判定EXT-201,"//android.widget.TextView[contains(@text,'EXT-201')]",is_in,yes,

@@ -1,5 +1,4 @@
-# coding: utf-8
-
+# encoding: utf-8
 import csv
 import codecs
 from driver.AndroidDriver import driver
@@ -9,6 +8,8 @@ from selenium.webdriver.remote.webelement import WebElement
 def operate_testcase(filepath):
     with codecs.open(filepath) as csvfile:
         filename = filepath.split('.')[0]
+        print filename
+        #filename = filename.encode('utf-8')
         steps = csv.DictReader(csvfile)
 
         for step in steps:
@@ -36,7 +37,9 @@ def operate_testcase(filepath):
                     getattr(WebElement, step['action'], 'wrong func name!')(target_elem)
                 else:
                     getattr(WebElement, step['action'], 'wrong func name!')(target_elem, step['paras'])
-            except Exception:
+            except Exception as e:
+                print step['xpath']
+                print e
                 print filename + ' ' + step['﻿element_name'] + ' is not ok!'
                 return
         print filename + ' test is ok!'

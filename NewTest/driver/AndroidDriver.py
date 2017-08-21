@@ -28,5 +28,9 @@ def driver(xpath, wait=10):
         android_driver.quit()
     else:
         android_driver.implicitly_wait(wait)
-        elem = android_driver.find_element_by_xpath(xpath)
-        return elem
+        try:
+            elem = android_driver.find_element_by_xpath(xpath)
+            return elem
+        except Exception:
+            elem = android_driver.find_element_by_id(xpath)
+            return elem
